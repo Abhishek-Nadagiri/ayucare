@@ -300,7 +300,7 @@ export default function CaseDetailsPage({
       <AppShell>
         <div className="p-8 text-center">
           <p className="text-sm font-semibold text-rose-500">Case record not found</p>
-          <Link href="/cases" className="mt-2 inline-block text-xs text-teal-500 underline">
+          <Link href="/cases" className="mt-2 inline-block text-xs text-orange-500 underline">
             Return to Cases Directory
           </Link>
         </div>
@@ -358,7 +358,7 @@ export default function CaseDetailsPage({
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="flex flex-wrap items-center gap-2.5">
-              <span className="font-mono text-xs font-extrabold px-2.5 py-1 rounded-md bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/30">
+              <span className="font-mono text-xs font-extrabold px-2.5 py-1 rounded-md bg-orange-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/30">
                 {caseData.caseNumber}
               </span>
               <Badge priority={caseData.priority} size="md">
@@ -385,7 +385,7 @@ export default function CaseDetailsPage({
                 Patient:{' '}
                 <Link
                   href={`/patients/${caseData.patient?.id}`}
-                  className="font-bold text-teal-600 dark:text-teal-400 hover:underline"
+                  className="font-bold text-orange-600 dark:text-orange-400 hover:underline"
                 >
                   {caseData.patient?.firstName} {caseData.patient?.lastName}
                 </Link>{' '}
@@ -412,7 +412,7 @@ export default function CaseDetailsPage({
               value={caseData.status}
               onChange={(e) => handleStatusChange(e.target.value as CaseStatus)}
               disabled={updatingStatus}
-              className="w-full text-xs font-semibold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-500/20 cursor-pointer"
+              className="w-full text-xs font-semibold px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-orange-500/20 cursor-pointer"
             >
               <option value="New">New</option>
               <option value="Under Review">Under Review</option>
@@ -568,9 +568,9 @@ export default function CaseDetailsPage({
             </Card>
 
             {/* Assessment & Care Plan */}
-            <Card className="md:col-span-2 border-teal-500/30">
-              <CardHeader className="bg-teal-500/5">
-                <CardTitle className="text-teal-600 dark:text-teal-400">
+            <Card className="md:col-span-2 border-orange-500/30">
+              <CardHeader className="bg-orange-500/5">
+                <CardTitle className="text-orange-600 dark:text-orange-400">
                   Assessment & Management Plan
                 </CardTitle>
               </CardHeader>
@@ -695,12 +695,12 @@ export default function CaseDetailsPage({
           <div className="relative pl-6 sm:pl-8 space-y-6 before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-800">
             {caseData.events?.map((evt) => (
               <div key={evt.id} className="relative group">
-                <div className="absolute -left-6 sm:-left-8 top-1 w-6 h-6 rounded-full bg-teal-500/20 border-2 border-teal-500 text-teal-500 flex items-center justify-center text-[10px] font-bold shadow-sm">
+                <div className="absolute -left-6 sm:-left-8 top-1 w-6 h-6 rounded-full bg-orange-500/20 border-2 border-orange-500 text-orange-500 flex items-center justify-center text-[10px] font-bold shadow-sm">
                   •
                 </div>
                 <div className="p-4 rounded-xl bg-white dark:bg-[#121927] border border-slate-200/80 dark:border-slate-800/80 shadow-sm">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-                    <span className="text-xs font-bold text-teal-600 dark:text-teal-400 uppercase tracking-wider font-mono">
+                    <span className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider font-mono">
                       {evt.eventType.replace(/_/g, ' ')}
                     </span>
                     <span className="text-[11px] text-slate-400 font-mono">
@@ -848,7 +848,7 @@ export default function CaseDetailsPage({
                 <Card key={att.id}>
                   <CardContent className="p-4 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 rounded-xl bg-teal-500/15 text-teal-600 dark:text-teal-400">
+                      <div className="p-2.5 rounded-xl bg-orange-500/15 text-orange-600 dark:text-orange-400">
                         <FileCheck className="w-5 h-5" />
                       </div>
                       <div>
@@ -867,7 +867,7 @@ export default function CaseDetailsPage({
                         e.preventDefault();
                         alert(`Opening simulated secure attachment preview: ${att.originalFilename}`);
                       }}
-                      className="inline-flex items-center gap-1.5 text-xs text-teal-600 dark:text-teal-400 font-semibold hover:underline"
+                      className="inline-flex items-center gap-1.5 text-xs text-orange-600 dark:text-orange-400 font-semibold hover:underline"
                     >
                       <Download className="w-3.5 h-3.5" />
                       Download / View

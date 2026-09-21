@@ -105,7 +105,7 @@ export default function DashboardPage() {
       {/* KPI METRIC CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Active Cases */}
-        <Card className="hover:border-teal-500/40 transition-all">
+        <Card className="hover:border-orange-500/40 transition-all">
           <CardContent className="p-5 flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
@@ -114,12 +114,12 @@ export default function DashboardPage() {
               <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">
                 {loading ? '...' : stats?.activeCases ?? 0}
               </h3>
-              <p className="text-xs text-teal-600 dark:text-teal-400 flex items-center gap-1 mt-1 font-medium">
+              <p className="text-xs text-orange-600 dark:text-orange-400 flex items-center gap-1 mt-1 font-medium">
                 <TrendingUp className="w-3 h-3" />
                 <span>{stats?.newCasesThisWeek ?? 0} new this week</span>
               </p>
             </div>
-            <div className="p-3 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400">
+            <div className="p-3 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400">
               <FolderHeart className="w-6 h-6" />
             </div>
           </CardContent>
@@ -245,7 +245,7 @@ export default function DashboardPage() {
         <Card className="lg:col-span-1">
           <CardHeader>
             <CardTitle>
-              <Building2 className="w-4 h-4 text-teal-500" />
+              <Building2 className="w-4 h-4 text-orange-500" />
               Department Workload
             </CardTitle>
             <CardDescription>Active patient cases categorized by department</CardDescription>
@@ -261,7 +261,7 @@ export default function DashboardPage() {
                     {dept}
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-teal-500/15 text-teal-600 dark:text-teal-400">
+                    <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-orange-500/15 text-orange-600 dark:text-orange-400">
                       {count} {count === 1 ? 'case' : 'cases'}
                     </span>
                   </div>
@@ -324,7 +324,7 @@ export default function DashboardPage() {
                   >
                     <div className="min-w-0 pr-4">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-mono font-bold text-teal-600 dark:text-teal-400">
+                        <span className="text-xs font-mono font-bold text-orange-600 dark:text-orange-400">
                           {c.caseNumber}
                         </span>
                         <Badge priority={c.priority} size="sm">
@@ -384,7 +384,7 @@ export default function DashboardPage() {
                           Due: {f.followupDate}
                         </span>
                         <Link href={`/cases/${f.caseId}`}>
-                          <span className="text-xs text-teal-600 dark:text-teal-400 font-semibold hover:underline">
+                          <span className="text-xs text-orange-600 dark:text-orange-400 font-semibold hover:underline">
                             {f.caseNumber}
                           </span>
                         </Link>
@@ -406,7 +406,7 @@ export default function DashboardPage() {
           <Card>
             <CardHeader>
               <CardTitle className="text-sm font-semibold flex items-center gap-2">
-                <Activity className="w-4 h-4 text-teal-500" />
+                <Activity className="w-4 h-4 text-orange-500" />
                 Live Clinical Activity
               </CardTitle>
             </CardHeader>
@@ -414,7 +414,7 @@ export default function DashboardPage() {
               <div className="divide-y divide-slate-100 dark:divide-slate-800/60 max-h-64 overflow-y-auto">
                 {recentEvents.map((e) => (
                   <div key={e.id} className="p-3 text-xs flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-1.5 flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-1.5 flex-shrink-0" />
                     <div className="min-w-0 flex-1">
                       <p className="font-semibold text-slate-800 dark:text-slate-200">
                         {e.actorName || 'Clinical Staff'}{' '}

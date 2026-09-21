@@ -1,8 +1,8 @@
-// Automated end-to-end integration test for Medora API & Domain Rules
+// Automated end-to-end integration test for Ayucare API & Domain Rules
 import assert from 'assert';
 
 async function runTests() {
-  console.log('--- STARTING MEDORA SYSTEM VERIFICATION TESTS ---');
+  console.log('--- STARTING AYUCARE SYSTEM VERIFICATION TESTS ---');
 
   // Let's test against a live dev or direct store execution
   const { store } = await import('../src/lib/db/store.ts');
@@ -38,7 +38,7 @@ async function runTests() {
     doctor
   );
 
-  assert(newPatient.patientIdentifier.startsWith('MED-PT-2026-'), 'Invalid patient identifier format');
+  assert(newPatient.patientIdentifier.startsWith('AYU-PT-2026-'), 'Invalid patient identifier format');
   assert(newPatient.firstName === 'Jonathan', 'First name mismatch');
   console.log(`✓ Created patient with unique ID: ${newPatient.patientIdentifier}`);
 

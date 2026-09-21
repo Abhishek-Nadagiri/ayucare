@@ -15,7 +15,11 @@ export async function POST(req: NextRequest) {
     }
 
     const users = store.getUsers();
-    const user = users.find((u) => u.email.toLowerCase() === email.toLowerCase());
+    const cleanInput = email.toLowerCase().replace('@ayucare.health', '').replace('@medora.health', '');
+    const user = users.find((u) => {
+      const uClean = u.email.toLowerCase().replace('@ayucare.health', '').replace('@medora.health', '');
+      return u.email.toLowerCase() === email.toLowerCase() || uClean === cleanInput;
+    });
 
     if (!user) {
       return NextResponse.json(
@@ -32,7 +36,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Accept standard demo password or any non-empty input for demo convenience
-    if (password && password !== 'Medora2026!' && password !== 'password') {
+    if (password && password !== 'Ayucare2026!' && password !== 'Medora2026!' && password !== 'password') {
       // In demo mode, accept any password or validate
     }
 

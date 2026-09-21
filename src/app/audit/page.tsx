@@ -85,7 +85,7 @@ export default function AuditLogsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200 dark:border-slate-800/80">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-            <ShieldCheck className="w-6 h-6 text-teal-500" />
+            <ShieldCheck className="w-6 h-6 text-orange-500" />
             System Audit & Access Logs
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
@@ -150,7 +150,7 @@ export default function AuditLogsPage() {
                           {log.actorRole || 'Service'}
                         </span>
                       </td>
-                      <td className="py-3 px-4 font-bold text-teal-600 dark:text-teal-400 whitespace-nowrap">
+                      <td className="py-3 px-4 font-bold text-orange-600 dark:text-orange-400 whitespace-nowrap">
                         {log.action}
                       </td>
                       <td className="py-3 px-4 text-slate-600 dark:text-slate-300">

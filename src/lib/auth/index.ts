@@ -3,7 +3,7 @@ import { store } from '@/lib/db/store';
 import { User, PermissionName } from '@/types';
 import { hasPermission } from './rbac';
 
-export const SESSION_COOKIE_NAME = 'medora_session_user';
+export const SESSION_COOKIE_NAME = 'ayucare_session_user';
 
 export async function getCurrentUser(): Promise<User | null> {
   try {

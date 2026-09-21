@@ -105,7 +105,7 @@ export default function PatientProfilePage({
       <AppShell>
         <div className="p-8 text-center">
           <p className="text-sm font-semibold text-rose-500">Patient not found</p>
-          <Link href="/patients" className="mt-2 inline-block text-xs text-teal-500 underline">
+          <Link href="/patients" className="mt-2 inline-block text-xs text-orange-500 underline">
             Return to Patients Directory
           </Link>
         </div>
@@ -154,7 +154,7 @@ export default function PatientProfilePage({
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="flex items-start gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-teal-500/15 border border-teal-500/30 text-teal-600 dark:text-teal-400 font-bold flex items-center justify-center text-2xl flex-shrink-0">
+            <div className="w-16 h-16 rounded-2xl bg-orange-500/15 border border-orange-500/30 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-2xl flex-shrink-0">
               {patient.firstName.charAt(0)}
               {patient.lastName.charAt(0)}
             </div>
@@ -164,7 +164,7 @@ export default function PatientProfilePage({
                 <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
                   {patient.firstName} {patient.lastName}
                 </h1>
-                <span className="font-mono text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-teal-600 dark:text-teal-400 border border-slate-200 dark:border-slate-700">
+                <span className="font-mono text-xs font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-orange-600 dark:text-orange-400 border border-slate-200 dark:border-slate-700">
                   {patient.patientIdentifier}
                 </span>
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
@@ -281,7 +281,7 @@ export default function PatientProfilePage({
             <CardHeader className="flex flex-row items-center justify-between">
               <div>
                 <CardTitle className="flex items-center gap-2">
-                  <FolderHeart className="w-5 h-5 text-teal-500" />
+                  <FolderHeart className="w-5 h-5 text-orange-500" />
                   Associated Clinical Cases ({patient.cases?.length || 0})
                 </CardTitle>
                 <CardDescription>
@@ -312,7 +312,7 @@ export default function PatientProfilePage({
                     >
                       <div className="flex items-center justify-between gap-2 mb-1.5">
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-mono font-bold text-teal-600 dark:text-teal-400">
+                          <span className="text-xs font-mono font-bold text-orange-600 dark:text-orange-400">
                             {c.caseNumber}
                           </span>
                           <Badge priority={c.priority} size="sm">
@@ -336,7 +336,7 @@ export default function PatientProfilePage({
 
                       <div className="mt-3 flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800/60">
                         <span>Department: <strong className="text-slate-600 dark:text-slate-300">{c.department}</strong></span>
-                        <span className="text-teal-600 dark:text-teal-400 font-medium hover:underline flex items-center gap-1">
+                        <span className="text-orange-600 dark:text-orange-400 font-medium hover:underline flex items-center gap-1">
                           Open Clinical Workspace
                           <ArrowUpRight className="w-3.5 h-3.5" />
                         </span>

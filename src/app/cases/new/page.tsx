@@ -159,7 +159,7 @@ function NewCaseForm() {
 
       <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-          <FolderPlus className="w-6 h-6 text-teal-500" />
+          <FolderPlus className="w-6 h-6 text-orange-500" />
           Open New Clinical Case
         </h1>
         <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">

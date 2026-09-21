@@ -20,7 +20,7 @@ export async function POST() {
 
   return NextResponse.json({
     data: {
-      message: 'Medora database successfully re-seeded with realistic clinical dataset.',
+      message: 'Ayucare database successfully re-seeded with realistic clinical dataset.',
     },
   });
 }

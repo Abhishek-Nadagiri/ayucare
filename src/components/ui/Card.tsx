@@ -13,7 +13,7 @@ export function Card({
     <div
       onClick={onClick}
       className={`bg-white dark:bg-[#121927] border border-slate-200/80 dark:border-slate-800/80 rounded-xl shadow-sm transition-all duration-200 ${
-        onClick ? 'cursor-pointer hover:border-teal-500/40 hover:shadow-md' : ''
+        onClick ? 'cursor-pointer hover:border-orange-500/40 hover:shadow-md' : ''
       } ${className}`}
     >
       {children}

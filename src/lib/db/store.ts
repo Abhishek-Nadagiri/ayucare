@@ -41,7 +41,7 @@ interface DatabaseSchema {
 const DATA_DIR = process.env.VERCEL
   ? path.join('/tmp', '.data')
   : path.join(process.cwd(), '.data');
-const DATA_FILE = path.join(DATA_DIR, 'medora.json');
+const DATA_FILE = path.join(DATA_DIR, 'ayucare.json');
 
 class Store {
   private data: DatabaseSchema | null = null;
@@ -158,7 +158,7 @@ class Store {
     const newPatient: Patient = {
       ...patientData,
       id: `pat-${Date.now()}`,
-      patientIdentifier: `MED-PT-2026-${formattedSeq}`,
+      patientIdentifier: `AYU-PT-2026-${formattedSeq}`,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       archivedAt: null,
@@ -774,10 +774,10 @@ class Store {
 // Global Singleton
 declare global {
   // eslint-disable-next-line no-var
-  var __medora_store__: Store | undefined;
+  var __ayucare_store__: Store | undefined;
 }
 
-export const store = globalThis.__medora_store__ ?? new Store();
+export const store = globalThis.__ayucare_store__ ?? new Store();
 if (process.env.NODE_ENV !== 'production') {
-  globalThis.__medora_store__ = store;
+  globalThis.__ayucare_store__ = store;
 }

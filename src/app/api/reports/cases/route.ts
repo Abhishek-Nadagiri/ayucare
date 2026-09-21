@@ -65,7 +65,7 @@ export async function GET(req: NextRequest) {
       status: 200,
       headers: {
         'Content-Type': 'text/csv',
-        'Content-Disposition': 'attachment; filename="medora_cases_report.csv"',
+        'Content-Disposition': 'attachment; filename="ayucare_cases_report.csv"',
       },
     });
   }

@@ -54,7 +54,7 @@ export default function ReportsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200 dark:border-slate-800/80">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-            <BarChart3 className="w-6 h-6 text-teal-500" />
+            <BarChart3 className="w-6 h-6 text-orange-500" />
             Clinical Reports & Analytics
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
@@ -94,7 +94,7 @@ export default function ReportsPage() {
                 {stats?.totalPatients ?? 0}
               </h3>
             </div>
-            <div className="p-3 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400">
+            <div className="p-3 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400">
               <Users className="w-6 h-6" />
             </div>
           </CardContent>
@@ -160,7 +160,7 @@ export default function ReportsPage() {
                     </div>
                     <div className="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
                       <div
-                        className="h-full bg-teal-500 rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full transition-all duration-500"
                         style={{ width: `${percent}%` }}
                       />
                     </div>

@@ -151,13 +151,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <aside className="hidden md:flex flex-col w-64 bg-white dark:bg-[#0f172a] border-r border-slate-200 dark:border-slate-800/80 flex-shrink-0 z-20">
         {/* Brand Header */}
         <div className="flex items-center gap-3 px-6 h-16 border-b border-slate-200 dark:border-slate-800/80">
-          <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-tr from-teal-600 to-cyan-500 text-white shadow-md shadow-teal-500/20">
+          <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-tr from-orange-600 via-orange-500 to-amber-400 text-white shadow-md shadow-orange-500/25 ring-1 ring-orange-400/30">
             <Stethoscope className="w-5 h-5" />
           </div>
           <div>
             <span className="font-bold tracking-tight text-lg text-slate-900 dark:text-white flex items-center gap-1.5">
-              MEDORA
-              <span className="text-[10px] px-1.5 py-0.2 rounded bg-teal-500/20 text-teal-600 dark:text-teal-400 font-semibold tracking-widest uppercase">
+              AYUCARE
+              <span className="text-[10px] px-1.5 py-0.2 rounded bg-orange-500/20 text-orange-600 dark:text-orange-400 font-semibold tracking-widest uppercase border border-orange-500/30">
                 Care
               </span>
             </span>
@@ -177,11 +177,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 href={item.href}
                 className={`flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm font-medium transition-all ${
                   isActive
-                    ? 'bg-teal-500/15 text-teal-600 dark:text-teal-400 font-semibold shadow-sm shadow-teal-500/5'
+                    ? 'bg-orange-500/15 text-orange-600 dark:text-orange-400 font-semibold shadow-sm shadow-orange-500/5'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-slate-200'
                 }`}
               >
-                <span className={isActive ? 'text-teal-500' : 'text-slate-400 dark:text-slate-500'}>
+                <span className={isActive ? 'text-orange-500' : 'text-slate-400 dark:text-slate-500'}>
                   {item.icon}
                 </span>
                 <span>{item.label}</span>
@@ -198,14 +198,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               className="w-full flex items-center justify-between p-2.5 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800/60 transition-colors text-left"
             >
               <div className="flex items-center gap-2.5 min-w-0">
-                <div className="w-8 h-8 rounded-full bg-teal-600/20 border border-teal-500/30 text-teal-600 dark:text-teal-400 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-orange-600/20 border border-orange-500/30 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-xs flex-shrink-0">
                   {currentUser?.fullName?.charAt(0) || 'U'}
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-xs font-semibold text-slate-900 dark:text-slate-200 truncate">
                     {currentUser?.fullName || 'Sarah Chen, MD'}
                   </p>
-                  <p className="text-[11px] text-teal-600 dark:text-teal-400 font-medium truncate flex items-center gap-1">
+                  <p className="text-[11px] text-orange-600 dark:text-orange-400 font-medium truncate flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                     {currentUser?.roleName || 'Doctor'}
                   </p>
@@ -228,7 +228,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     <div className="font-semibold text-slate-900 dark:text-white">Dr. Sarah Chen</div>
                     <div className="text-[10px] text-slate-400">Doctor (Clinical Lead)</div>
                   </div>
-                  {currentUser?.roleName === 'Doctor' && <CheckCircle2 className="w-4 h-4 text-teal-500" />}
+                  {currentUser?.roleName === 'Doctor' && <CheckCircle2 className="w-4 h-4 text-orange-500" />}
                 </button>
                 <button
                   onClick={() => handleRoleSwitch('Nurse')}
@@ -238,7 +238,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     <div className="font-semibold text-slate-900 dark:text-white">James Rodriguez, RN</div>
                     <div className="text-[10px] text-slate-400">Nurse (Observations / Care)</div>
                   </div>
-                  {currentUser?.roleName === 'Nurse' && <CheckCircle2 className="w-4 h-4 text-teal-500" />}
+                  {currentUser?.roleName === 'Nurse' && <CheckCircle2 className="w-4 h-4 text-orange-500" />}
                 </button>
                 <button
                   onClick={() => handleRoleSwitch('Administrator')}
@@ -248,7 +248,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     <div className="font-semibold text-slate-900 dark:text-white">Elena Rostova</div>
                     <div className="text-[10px] text-slate-400">Admin (Audit & Users)</div>
                   </div>
-                  {currentUser?.roleName === 'Administrator' && <CheckCircle2 className="w-4 h-4 text-teal-500" />}
+                  {currentUser?.roleName === 'Administrator' && <CheckCircle2 className="w-4 h-4 text-orange-500" />}
                 </button>
                 <button
                   onClick={() => handleRoleSwitch('Student')}
@@ -258,7 +258,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     <div className="font-semibold text-slate-900 dark:text-white">Alex Kim</div>
                     <div className="text-[10px] text-slate-400">Student (Trainee View)</div>
                   </div>
-                  {currentUser?.roleName === 'Student' && <CheckCircle2 className="w-4 h-4 text-teal-500" />}
+                  {currentUser?.roleName === 'Student' && <CheckCircle2 className="w-4 h-4 text-orange-500" />}
                 </button>
                 <div className="border-t border-slate-100 dark:border-slate-800 mt-1.5 pt-1.5">
                   <button
@@ -285,8 +285,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <div className="relative w-64 max-w-[80vw] bg-white dark:bg-[#0f172a] h-full flex flex-col z-10 border-r border-slate-200 dark:border-slate-800">
             <div className="flex items-center justify-between px-6 h-16 border-b border-slate-200 dark:border-slate-800">
               <div className="flex items-center gap-2">
-                <Stethoscope className="w-5 h-5 text-teal-500" />
-                <span className="font-bold tracking-tight text-slate-900 dark:text-white">MEDORA</span>
+                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-orange-600 to-amber-400 text-white shadow-sm">
+                  <Stethoscope className="w-4 h-4" />
+                </div>
+                <span className="font-bold tracking-tight text-slate-900 dark:text-white">AYUCARE</span>
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -303,7 +305,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm font-medium ${
                     pathname === item.href
-                      ? 'bg-teal-500/15 text-teal-500 font-semibold'
+                      ? 'bg-orange-500/15 text-orange-500 font-semibold'
                       : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
                   }`}
                 >
@@ -348,7 +350,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               onClick={() => setShowRoleMenu(!showRoleMenu)}
               className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200/80 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700/60 transition-all text-xs font-medium"
             >
-              <span className="w-2 h-2 rounded-full bg-teal-500"></span>
+              <span className="w-2 h-2 rounded-full bg-orange-500"></span>
               <span className="text-slate-600 dark:text-slate-400">Role:</span>
               <span className="font-semibold text-slate-900 dark:text-slate-100">
                 {currentUser?.roleName || 'Doctor'}
@@ -387,7 +389,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     <div className="flex items-center gap-2">
                       <h4 className="text-sm font-bold text-slate-900 dark:text-white">Notifications</h4>
                       {unreadCount > 0 && (
-                        <span className="px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-semibold">
+                        <span className="px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 text-xs font-semibold">
                           {unreadCount} unread
                         </span>
                       )}
@@ -395,7 +397,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     {unreadCount > 0 && (
                       <button
                         onClick={markAllNotificationsAsRead}
-                        className="text-xs text-teal-600 dark:text-teal-400 hover:underline font-medium"
+                        className="text-xs text-orange-600 dark:text-orange-400 hover:underline font-medium"
                       >
                         Mark all as read
                       </button>
@@ -412,7 +414,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                         <div
                           key={n.id}
                           className={`p-3.5 hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors ${
-                            !n.readAt ? 'bg-teal-500/5 dark:bg-teal-950/20' : ''
+                            !n.readAt ? 'bg-orange-500/5 dark:bg-orange-950/20' : ''
                           }`}
                         >
                           <div className="flex items-start gap-2.5">
@@ -421,7 +423,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                             ) : n.type === 'FOLLOWUP_UPCOMING' ? (
                               <Clock className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
                             ) : (
-                              <Activity className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                              <Activity className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
                             )}
                             <div className="min-w-0 flex-1">
                               <div className="flex items-center justify-between">
@@ -429,7 +431,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                                   {n.title}
                                 </p>
                                 {!n.readAt && (
-                                  <span className="w-2 h-2 rounded-full bg-teal-500 flex-shrink-0"></span>
+                                  <span className="w-2 h-2 rounded-full bg-orange-500 flex-shrink-0"></span>
                                 )}
                               </div>
                               <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 line-clamp-2">
@@ -439,7 +441,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                                 <Link
                                   href={`/cases/${n.relatedCaseId}`}
                                   onClick={() => setShowNotifications(false)}
-                                  className="inline-block text-[11px] text-teal-600 dark:text-teal-400 font-medium hover:underline mt-1"
+                                  className="inline-block text-[11px] text-orange-600 dark:text-orange-400 font-medium hover:underline mt-1"
                                 >
                                   View Related Case →
                                 </Link>

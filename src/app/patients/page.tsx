@@ -176,7 +176,7 @@ export default function PatientsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200 dark:border-slate-800/80">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-            <Users className="w-6 h-6 text-teal-500" />
+            <Users className="w-6 h-6 text-orange-500" />
             Patient Records Directory
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
@@ -200,7 +200,7 @@ export default function PatientsPage() {
       <div className="p-4 rounded-xl bg-white dark:bg-[#121927] border border-slate-200/80 dark:border-slate-800/80 shadow-sm flex flex-col sm:flex-row gap-3 items-center justify-between">
         <div className="w-full sm:w-80">
           <Input
-            placeholder="Search by name or MED-PT-..."
+            placeholder="Search by name or AYU-PT-..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             leftIcon={<Search className="w-4 h-4" />}
@@ -226,7 +226,7 @@ export default function PatientsPage() {
               type="checkbox"
               checked={showArchived}
               onChange={(e) => setShowArchived(e.target.checked)}
-              className="rounded border-slate-300 text-teal-600 focus:ring-teal-500"
+              className="rounded border-slate-300 text-orange-600 focus:ring-orange-500"
             />
             Show Archived Records
           </label>
@@ -274,7 +274,7 @@ export default function PatientsPage() {
                           p.archivedAt ? 'opacity-60 bg-slate-100/50 dark:bg-slate-900/40' : ''
                         }`}
                       >
-                        <td className="py-3.5 px-4 font-mono font-bold text-xs text-teal-600 dark:text-teal-400">
+                        <td className="py-3.5 px-4 font-mono font-bold text-xs text-orange-600 dark:text-orange-400">
                           {p.patientIdentifier}
                         </td>
                         <td className="py-3.5 px-4 font-semibold text-slate-900 dark:text-white">

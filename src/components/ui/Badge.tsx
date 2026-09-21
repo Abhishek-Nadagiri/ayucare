@@ -85,7 +85,7 @@ export function Badge({
         );
       case 'Active':
         return (
-          <span className={`inline-flex items-center gap-1 rounded-full bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/30 ${sizeClasses} ${className}`}>
+          <span className={`inline-flex items-center gap-1 rounded-full bg-orange-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/30 ${sizeClasses} ${className}`}>
             Active
           </span>
         );
@@ -137,7 +137,7 @@ export function Badge({
     high: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30',
     normal: 'bg-sky-500/15 text-sky-600 dark:text-sky-400 border border-sky-500/30',
     low: 'bg-slate-500/15 text-slate-600 dark:text-slate-400 border border-slate-500/30',
-    status: 'bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/30',
+    status: 'bg-orange-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/30',
     success: 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30',
     warning: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30',
     danger: 'bg-rose-500/15 text-rose-600 dark:text-rose-400 border border-rose-500/30',

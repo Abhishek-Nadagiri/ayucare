@@ -54,7 +54,7 @@ export interface PatientContactInfo {
 
 export interface Patient {
   id: string;
-  patientIdentifier: string; // e.g. MED-PT-2026-0001
+  patientIdentifier: string; // e.g. AYU-PT-2026-0001
   firstName: string;
   lastName: string;
   dateOfBirth: string; // YYYY-MM-DD

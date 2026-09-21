@@ -105,7 +105,7 @@ function FollowupsContent() {
     { id: 'ALL', label: 'All Follow-ups' },
     { id: 'OVERDUE', label: 'Overdue Milestones', icon: <AlertTriangle className="w-3.5 h-3.5 text-rose-500" /> },
     { id: 'TODAY', label: 'Due Today', icon: <Clock className="w-3.5 h-3.5 text-amber-500" /> },
-    { id: 'UPCOMING', label: 'Upcoming', icon: <Calendar className="w-3.5 h-3.5 text-teal-500" /> },
+    { id: 'UPCOMING', label: 'Upcoming', icon: <Calendar className="w-3.5 h-3.5 text-orange-500" /> },
   ];
 
   return (
@@ -114,7 +114,7 @@ function FollowupsContent() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200 dark:border-slate-800/80">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-            <CalendarClock className="w-6 h-6 text-teal-500" />
+            <CalendarClock className="w-6 h-6 text-orange-500" />
             Patient Follow-up Workspace
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
@@ -137,7 +137,7 @@ function FollowupsContent() {
         ) : followups.length === 0 ? (
           <Card>
             <CardContent className="p-12 text-center text-xs text-slate-400 space-y-2">
-              <CheckCircle2 className="w-8 h-8 text-teal-500 mx-auto" />
+              <CheckCircle2 className="w-8 h-8 text-orange-500 mx-auto" />
               <p className="font-semibold text-slate-700 dark:text-slate-300">
                 No follow-ups found in this category.
               </p>
@@ -172,7 +172,7 @@ function FollowupsContent() {
                       )}
                       <Link
                         href={`/cases/${f.caseId}`}
-                        className="font-mono text-xs text-teal-600 dark:text-teal-400 font-bold hover:underline ml-1"
+                        className="font-mono text-xs text-orange-600 dark:text-orange-400 font-bold hover:underline ml-1"
                       >
                         {f.caseNumber}
                       </Link>

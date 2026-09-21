@@ -35,7 +35,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className={`w-full rounded-lg bg-white dark:bg-slate-900 border ${
               error
                 ? 'border-rose-500 focus:ring-rose-500'
-                : 'border-slate-300 dark:border-slate-700 focus:border-teal-500 dark:focus:border-teal-500 focus:ring-teal-500/20'
+                : 'border-slate-300 dark:border-slate-700 focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500/20'
             } px-3 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 transition-all ${
               leftIcon ? 'pl-9' : ''
             } ${rightIcon ? 'pr-9' : ''} ${className}`}
@@ -84,7 +84,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           className={`w-full rounded-lg bg-white dark:bg-slate-900 border ${
             error
               ? 'border-rose-500 focus:ring-rose-500'
-              : 'border-slate-300 dark:border-slate-700 focus:border-teal-500 dark:focus:border-teal-500 focus:ring-teal-500/20'
+              : 'border-slate-300 dark:border-slate-700 focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500/20'
           } px-3 py-2 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 transition-all ${className}`}
           rows={props.rows || 3}
           {...props}
@@ -126,7 +126,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           className={`w-full rounded-lg bg-white dark:bg-slate-900 border ${
             error
               ? 'border-rose-500 focus:ring-rose-500'
-              : 'border-slate-300 dark:border-slate-700 focus:border-teal-500 dark:focus:border-teal-500 focus:ring-teal-500/20'
+              : 'border-slate-300 dark:border-slate-700 focus:border-orange-500 dark:focus:border-orange-500 focus:ring-orange-500/20'
           } px-3 py-2 text-sm text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 transition-all cursor-pointer ${className}`}
           {...props}
         >

@@ -132,7 +132,7 @@ export default function UsersPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200 dark:border-slate-800/80">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-            <UserCog className="w-6 h-6 text-teal-500" />
+            <UserCog className="w-6 h-6 text-orange-500" />
             Healthcare Staff & User Directory
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
@@ -180,7 +180,7 @@ export default function UsersPage() {
                     >
                       <td className="py-3.5 px-4">
                         <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-teal-500/20 text-teal-600 dark:text-teal-400 font-bold flex items-center justify-center text-xs">
+                          <div className="w-8 h-8 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-xs">
                             {u.fullName.charAt(0)}
                           </div>
                           <div>
@@ -261,7 +261,7 @@ export default function UsersPage() {
             label="Clinical Email Address"
             type="email"
             required
-            placeholder="jennifer@medora.health"
+            placeholder="jennifer@ayucare.health"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

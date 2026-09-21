@@ -3,27 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --background: #fafaf9;
+  --foreground: #0c0a09;
   --card: #ffffff;
-  --card-foreground: #0f172a;
-  --border: #e2e8f0;
-  --primary: #0d9488;
+  --card-foreground: #0c0a09;
+  --border: #e7e5e4;
+  --primary: #ea580c;
   --primary-foreground: #ffffff;
-  --muted: #64748b;
-  --accent: #f1f5f9;
+  --muted: #78716c;
+  --accent: #fff7ed;
 }
 
 .dark {
-  --background: #090d16;
+  --background: #080b12;
   --foreground: #f8fafc;
-  --card: #0f172a;
+  --card: #0e1422;
   --card-foreground: #f8fafc;
   --border: #1e293b;
-  --primary: #14b8a6;
-  --primary-foreground: #042f2e;
+  --primary: #f97316;
+  --primary-foreground: #ffffff;
   --muted: #94a3b8;
-  --accent: #1e293b;
+  --accent: #1c1917;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom modern scrollbar */
+/* Custom modern scrollbar with warm orange tint on hover */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -42,23 +42,33 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.4);
+  background: rgba(148, 163, 184, 0.35);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 116, 139, 0.6);
+  background: rgba(249, 115, 22, 0.6);
 }
 
 /* Clinical subtle glassmorphism */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(231, 229, 228, 0.8);
 }
 .dark .glass-panel {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(14, 20, 34, 0.85);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+/* Radiant orange glow accents */
+.orange-glow {
+  box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.35);
+}
+
+.orange-border-glow:hover {
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0 15px -3px rgba(249, 115, 22, 0.2);
 }
 
 /* Badge pulse indicators */

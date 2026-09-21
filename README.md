@@ -1,8 +1,8 @@
-# Medora — Patient Case Monitoring & Management System
+# Ayucare — Patient Case Monitoring & Management System
 
-Medora is a healthcare web application built for authorized healthcare professionals (Doctors, Nurses, Administrators, and Medical Trainees) to record, organize, monitor, and manage patient cases throughout the care journey.
+Ayucare is a healthcare web application built for authorized healthcare professionals (Doctors, Nurses, Administrators, and Medical Trainees) to record, organize, monitor, and manage patient cases throughout the care journey.
 
-Built strictly in accordance with **[Medora_PRD.md](./Medora_PRD.md)** and **[Medora_TRD.md](./Medora_TRD.md)**.
+Built strictly in accordance with clinical governance standards with modern dark theme and orange brand palette.
 
 ---
 
@@ -16,7 +16,7 @@ Built strictly in accordance with **[Medora_PRD.md](./Medora_PRD.md)** and **[Me
   - Includes an interactive **Demo Persona Switcher** in the top navigation bar.
 
 - **🏥 Patient Records Directory (`/patients` & `/patients/[id]`):**
-  - Unique identifier generation: `MED-PT-2026-XXXX`.
+  - Unique identifier generation: `AYU-PT-2026-XXXX`.
   - Comprehensive clinical demographics, blood type, and allergy safety alerts (e.g. Penicillin, Sulfa).
   - Search, filter by sex/status, emergency contacts, and soft-archival controls.
 
@@ -55,8 +55,8 @@ Built strictly in accordance with **[Medora_PRD.md](./Medora_PRD.md)** and **[Me
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/your-username/medora.git
-cd medora
+git clone https://github.com/your-username/ayucare.git
+cd ayucare
 npm install
 ```
 
@@ -85,10 +85,10 @@ The application includes pre-seeded realistic clinical scenarios (Cardiology, Ne
 
 | Persona | Role | Email | Password | Primary Permissions |
 | :--- | :--- | :--- | :--- | :--- |
-| **Dr. Sarah Chen, MD** | Doctor | `dr.sarah@medora.health` | `Medora2026!` | Full clinical case management, documentation, follow-ups |
-| **James Rodriguez, RN** | Nurse | `nurse.james@medora.health` | `Medora2026!` | Patient observations, care notes, follow-up execution |
-| **Elena Rostova** | Administrator | `admin.elena@medora.health` | `Medora2026!` | User provisioning, role policies, system audit logs |
-| **Alex Kim** | Student | `student.alex@medora.health` | `Medora2026!` | Supervised training records & notes |
+| **Dr. Sarah Chen, MD** | Doctor | `dr.sarah@ayucare.health` | `Ayucare2026!` | Full clinical case management, documentation, follow-ups |
+| **James Rodriguez, RN** | Nurse | `nurse.james@ayucare.health` | `Ayucare2026!` | Patient observations, care notes, follow-up execution |
+| **Elena Rostova** | Administrator | `admin.elena@ayucare.health` | `Ayucare2026!` | User provisioning, role policies, system audit logs |
+| **Alex Kim** | Student | `student.alex@ayucare.health` | `Ayucare2026!` | Supervised training records & notes |
 
 ---
 
@@ -100,7 +100,7 @@ The application includes pre-seeded realistic clinical scenarios (Cardiology, Ne
   - In Settings (`/settings`), you can click **"Reset Database to Clean Demo State"** at any time.
 
 - **Production PostgreSQL / Supabase Schema:**
-  - The complete production DDL schema matching TRD Sections 8–10 is provided in `src/lib/db/schema.sql`.
+  - The complete production DDL schema is provided in `src/lib/db/schema.sql`.
   - Includes tables for `roles`, `permissions`, `users`, `patients`, `patient_cases`, `case_notes`, `case_events`, `case_followups`, `attachments`, `notifications`, and `audit_logs` with UUID primary keys, foreign keys, and indexes.
 
 ---
@@ -111,9 +111,9 @@ The application includes pre-seeded realistic clinical scenarios (Cardiology, Ne
    ```bash
    git init
    git add .
-   git commit -m "Initial commit of Medora clinical case management system"
+   git commit -m "Initial commit of Ayucare clinical case management system"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/medora.git
+   git remote add origin https://github.com/<your-username>/ayucare.git
    git push -u origin main
    ```
 
@@ -126,4 +126,4 @@ The application includes pre-seeded realistic clinical scenarios (Cardiology, Ne
 
 ## ⚖️ Clinical Disclaimer
 
-Medora is a software workspace for organizing and monitoring patient cases. It does not independently diagnose diseases, prescribe medication, or replace professional clinical judgment.
+Ayucare is a software workspace for organizing and monitoring patient cases. It does not independently diagnose diseases, prescribe medication, or replace professional clinical judgment.

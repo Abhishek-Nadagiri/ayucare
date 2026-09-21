@@ -66,7 +66,7 @@ export default function SettingsPage() {
       {/* Header */}
       <div className="pb-2 border-b border-slate-200 dark:border-slate-800/80">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-          <Settings className="w-6 h-6 text-teal-500" />
+          <Settings className="w-6 h-6 text-orange-500" />
           System Settings & User Profile
         </h1>
         <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
@@ -80,14 +80,14 @@ export default function SettingsPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <User className="w-5 h-5 text-teal-500" />
+                <User className="w-5 h-5 text-orange-500" />
                 Active Healthcare Profile
               </CardTitle>
               <CardDescription>Authenticated clinician session details</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-xs sm:text-sm">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-600 dark:text-teal-400 font-bold flex items-center justify-center text-lg">
+                <div className="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-600 dark:text-orange-400 font-bold flex items-center justify-center text-lg">
                   {currentUser?.fullName?.charAt(0) || 'U'}
                 </div>
                 <div>
@@ -191,13 +191,13 @@ export default function SettingsPage() {
                       key={perm}
                       className={`p-2.5 rounded-lg border text-xs flex items-center justify-between ${
                         has
-                          ? 'bg-teal-500/10 border-teal-500/30 text-teal-700 dark:text-teal-300 font-medium'
+                          ? 'bg-orange-500/10 border-orange-500/30 text-orange-700 dark:text-orange-300 font-medium'
                           : 'bg-slate-50 dark:bg-slate-900/30 border-slate-200 dark:border-slate-800 text-slate-400 opacity-60'
                       }`}
                     >
                       <span className="font-mono">{perm}</span>
                       {has ? (
-                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-500 flex-shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-orange-500 flex-shrink-0" />
                       ) : (
                         <span className="text-[10px] text-slate-400">Blocked</span>
                       )}
@@ -212,7 +212,7 @@ export default function SettingsPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-teal-500" />
+                <Lock className="w-4 h-4 text-orange-500" />
                 Data Protection & Privacy Architecture
               </CardTitle>
             </CardHeader>
